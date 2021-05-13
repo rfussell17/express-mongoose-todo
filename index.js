@@ -19,6 +19,14 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }))
 
+
+app.get("/todos", async (req, res) => {
+  const todos = await Todo.find({});
+  console.log(todos);
+  res.render("todos/index", { todos });
+});
+
+
 app.listen(3000, () => {
   console.log("listening on port 3000");
 });

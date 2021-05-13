@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Product = require('./models/todo');
+const Todo = require('./models/todo');
 
 mongoose.connect('mongodb://localhost:27017/todoApp', {useNewUrlParser: true})
   .then(()=>{
