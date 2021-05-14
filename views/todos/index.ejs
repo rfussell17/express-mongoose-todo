@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo's</title>
-</head>
-<body>
-  <h1>Todo</h1>
-  <ul>
-    <% for(let todo of todos){ %> 
-    <li><a href="/todos/<%=todo._id%>"><%= todo.name %></a></li>
-    <% } %>
-  </ul>
-  <a href="/todos/new">New todo</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo's</title>
+  </head>
+  <body>
+    <h1>Todo</h1>
+    <ul class="todo-list">
+      <% for(let todo of todos){ %>
+      <li class="todo-item"><%= todo.name %></li>
+      <a href="/todos/<%=todo._id%>">+</a>
+      <% } %>
+    </ul>
+
+    <form action="/todos" method="post" class="todo-form">
+      <input type="text" name="name" id="name" placeholder="todo" />
+      <input type="details" name="details" id="details" placeholder="details" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>

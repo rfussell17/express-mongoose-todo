@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= todo.name %></title>
+  </head>
+  <body>
+    <h1>Edit '<%= todo.name %>'</h1>
+    <form action="/todos/<%=todo._id%>?_method=PUT" method="POST">
+      <input type="text" name="name" id="name" placeholder="todo" />
+      <input type="details" name="details" id="details" placeholder="details" />
+      <br />
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+    <button class="btn-cancel">
+      <a href="/todos/<%=todo._id%>">Cancel</a>
+    </button>
+  </body>
+</html>
