@@ -1,0 +1,22 @@
+body {
+margin: 0 auto;
+padding: 0;
+border-style: border-box;
+}
+
+/* .list-group-item {
+  width: 20%;
+}
+
+.icon {
+  padding-left: 30%;
+  padding-right: 0;
+  color: gray;
+} */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+

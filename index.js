@@ -39,13 +39,13 @@ app.get("/todos/:id", async (req, res) => {
   const { id } = req.params;
   const todo = await Todo.findById(id);
   console.log(todo);
-  res.render("todos/details", { todo });
+  res.render("todos/details", { todo, title: todo.name });
 });
 
 app.get("/todos/:id/edit", async (req, res) => {
   const { id } = req.params;
   const todo = await Todo.findById(id);
-  res.render("todos/edit", { todo });
+  res.render("todos/edit", { todo, title: todo.name });
 });
 
 app.put("/todos/:id", async (req, res) => {

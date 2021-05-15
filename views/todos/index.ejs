@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo's</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <script src="/js/bootstrap.min.js"></script>
-  </head>
+<%- include('../partials/head')%>
+
   <body>
     <h1>Todo</h1>
-    <ul class="todo-list">
+    <ul class="list-group">
       <% for(let todo of todos){ %>
-      <li class="todo-item"><%= todo.name %></li>
-      <a href="/todos/<%=todo._id%>">+</a>
-      <% } %>
+        <li class="list-group-item list-group-item-action"> <%= todo.name %><a href="/todos/<%=todo._id%>"><i class="fas fa-plus icon"></i></a></li>
+        
+        <% } %>
     </ul>
+<div class="form-container">
+  <form action="/todos" method="post" class="todo-form">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="name" id="name" placeholder="name@example.com">
+      <label for="floatingInput">Todo</label>
+    </div>
+    <div class="form-floating">
+      <textarea class="form-control" name="details" placeholder="Leave a comment here" id="details"></textarea>
+      <label for="floatingTextarea">Add more details...</label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
 
-    <form action="/todos" method="post" class="todo-form">
-      <input type="text" name="name" id="name" placeholder="todo" />
-      <input type="details" name="details" id="details" placeholder="details" />
-      <button type="submit">Submit</button>
-    </form>
   </body>
-</html>
+  </html>
