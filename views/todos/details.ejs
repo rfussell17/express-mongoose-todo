@@ -1,13 +1,19 @@
 <%- include('../partials/head')%>
   <body>
-    <h1><%= todo.name %></h1>
-    <p><%= todo.details %></p>
+    <div class="container">
 
-    <a href="/todos">Back</a>
-    <a href="/todos/<%=todo._id%>/edit">Edit</a>
+      <div class="jumbotron jumbotron-fluid">
+          <h1 class="display-4"><%= todo.name %></h1>
+          <p class="lead"><%= todo.details %>.</p>
+        </div>
 
-    <form action="/todos/<%=todo._id%>?_method=DELETE" method="POST">
-      <button>Delete</button>
-    </form>
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/todos'"><i class="fas fa-angle-left btn-icon"></i></button>
+        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/todos/<%=todo._id%>/edit'"><i class="fas fa-edit"></i></button>
+        <form action="/todos/<%=todo._id%>?_method=DELETE" method="POST">
+          <button class="btn btn-outline-danger"><i class="fas fa-trash-alt btn-icon"></i></button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

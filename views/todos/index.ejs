@@ -2,12 +2,31 @@
 
   <body>
     <h1>Todo</h1>
-    <ul class="list-group">
-      <% for(let todo of todos){ %>
-        <li class="list-group-item list-group-item-action"> <%= todo.name %><a href="/todos/<%=todo._id%>"><i class="fas fa-plus icon"></i></a></li>
+
+
+    <!-- <ul class="list-group"> -->
+
         
-        <% } %>
-    </ul>
+    <!-- </ul> -->
+
+<div class="accordion" id="accordionExample">
+  <% for(let todo of todos){ %>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#todo-<%=todo._id%>" aria-expanded="true" aria-controls="todo-<%=todo._id%>">
+       <%= todo.name %>
+       <a href="/todos/<%=todo._id%>"><i class="fas fa-pencil-alt icon"></i></a>
+      </button>
+    </h2>
+    <div id="todo-<%=todo._id%>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <%= todo.details %>
+      </div>
+    </div>
+  </div>
+  <% } %>
+  </div>
+
 <div class="form-container">
   <form action="/todos" method="post" class="todo-form">
     <div class="form-floating mb-3">
@@ -15,7 +34,7 @@
       <label for="floatingInput">Todo</label>
     </div>
     <div class="form-floating">
-      <textarea class="form-control" name="details" placeholder="Leave a comment here" id="details"></textarea>
+      <textarea class="form-control" name="details" id="details"></textarea>
       <label for="floatingTextarea">Add more details...</label>
     </div>
     <button type="submit">Submit</button>

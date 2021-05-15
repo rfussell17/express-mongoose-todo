@@ -7,16 +7,24 @@ border-style: border-box;
 /* .list-group-item {
   width: 20%;
 }
-
+*/
 .icon {
-  padding-left: 30%;
-  padding-right: 0;
-  color: gray;
-} */
+  position: absolute;
+  right: 5%;
+  top: 37%;
+} 
+
+.btn-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
 
 .form-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
+
 
