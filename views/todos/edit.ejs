@@ -1,6 +1,4 @@
 <%- include('../partials/head')%>
-
-  <body>
     <div class="container">
       <header>
         <h3>Edit '<%= todo.name %>'</h3>
@@ -20,12 +18,9 @@
                  class="fas fa-check"></i></button>
                  </div>
           </form>
-      </section>
       <section class="edit-btns">
         <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/todos/<%=todo._id%>'"><i
             class="fas fa-angle-left btn-icon"></i></button>
       </section>
     </div>
-  </body>
-
-  </html>
+    <%- include('../partials/footer')%>
