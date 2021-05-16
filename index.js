@@ -29,6 +29,11 @@ app.get("/todos", async (req, res) => {
   res.render("todos/index", { todos });
 });
 
+app.get("/todos/add", async (req, res) => {
+  const todos = await Todo.find({});
+  res.render("todos/add", { todos });
+});
+
 app.post("/todos", async (req, res) => {
   const newTodo = new Todo(req.body);
   await newTodo.save();
