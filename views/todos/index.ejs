@@ -1,8 +1,5 @@
 <%- include('../partials/head')%>
-
-
-    <div class="jumbotron jumbotron-fluid">
-      <main>
+<div class="parent">
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <% for(let todo of todos){ %>
             <div class="accordion-item">
@@ -22,15 +19,13 @@
             </div>
             <% } %>
         </div>
-    </div>
-    </main>
-      <section class="form-input-submit">
+      <section id="form-input-submit">
         <form action="/todos" method="post" class="todo-form">
-          <div class="form-floating mb-3 col-12">
+          <div class="form-floating col-12">
             <input type="text" class="form-control" name="name" id="name" placeholder="name@example.com">
             <label for="floatingInput">Todo</label>
           </div>
-          <div class="form-floating mb-3 col-12 input-details">
+          <div class="form-floating col-12 input-details">
             <input type="text" class="form-control" name="details" id="details">
             <label for="floatingInput">Add more details...</label>
           </div>
@@ -38,5 +33,6 @@
               class="fas fa-check"></i></button>
         </form>
       </section>
+    </div>
 
     <%- include('../partials/footer')%>
