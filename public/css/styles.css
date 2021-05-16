@@ -25,23 +25,19 @@ min-height: 100vh;
 
 /*content */
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.todo-form {
+/* .todo-form {
   display: flex; 
 flex-direction: column;
 align-self: flex-end;
-}
+} */
 
 .form-input-submit {
   margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 /*footer */
@@ -90,6 +86,10 @@ color: var(--main-bg-color);
 
 }
 
+/* hidden */
+.input-details {
+  display: none;
+}
    
   /* @media (min-width: 768px){
    
@@ -97,14 +97,18 @@ color: var(--main-bg-color);
    
   }
     */
-  /* @media (min-width: 1024px){
+  @media (min-width: 1024px){
    
-  ...
+ .input-details {
+  display: block;
+}
    
   }
    
   @media (min-width: 1200px){
    
-  ...
+.input-details {
+  display: block;
+}
    
-  } */
+  }

@@ -3,14 +3,13 @@
       <header>
         <h3>Edit '<%= todo.name %>'</h3>
       </header>
-        <div class="form-container">
           <form action="/todos/<%=todo._id%>?_method=PUT" method="POST">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" name="name" id="name">
+              <input type="text" class="form-control" value="<%=todo.name%> " name="name" id="name">
               <label for="floatingInput">edit todo</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" name="details" id="details">
+              <input type="text" class="form-control" value="<%=todo.details%>" name="details" id="details">
               <label for="floatingTextarea">edit details</label>
             </div>
             <div class="btn-group edit-btn-group" role="group" aria-label="Basic outlined example">
