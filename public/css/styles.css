@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 :root {
@@ -12,7 +12,6 @@
 
 body {
   background-color: #fff ;
-  height: 50%;
 }
 
 nav, footer {
@@ -27,11 +26,9 @@ nav, footer {
   clear: both;
 }
 
-.accordion-button:active {
-background-color: #fff ;
-}
 
 /*Header */
+
 
 .header-icon {
   -webkit-text-stroke: 2px rgb(41, 43, 44) ;
@@ -41,31 +38,38 @@ background-color: #fff ;
 
 .parent {
   display:flex; 
-  /* height: 50%; */
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-#form-input-submit {
-  align-self: center;
-  /* display: none; */
+#edit-details-section {
+  display:flex; 
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
 }
+
 
 .todo-form {
   position: fixed;
   bottom: 0;
   width: 90%;
-  height: 29%;
+  height: 40%;
   margin-bottom: 0;
   padding-bottom: 0;
   left: 5%;
+}
+
+.button-details {
+
 }
 
 /*footer */
 
 footer {
   position: fixed;
-  color: #fff;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -111,9 +115,9 @@ color: var(--main-bg-color);
 }
 
 /* hidden */
-.input-details {
+/* .input-details {
   display: none;
-}
+} */
    
   /* @media (min-width: 768px){
    

@@ -1,17 +1,10 @@
 <%- include('../partials/head')%>
-    <div class="container">
 
-      <div class="jumbotron jumbotron-fluid">
-          <h1 class="display-4"><%= todo.name %></h1>
-          <p class="lead"><%= todo.details %></p>
-        </div>
+    <div class="parent-details-section">
+   
+      <h1 class="display-4 text-center mt-3 mb-3"><%= todo.name %></h1>
+      <p class="lead text-left"><%= todo.details %></p>
 
-      <div class="btn-group" role="group" aria-label="Basic outlined example">
-        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/todos'"><i class="fas fa-angle-left btn-icon"></i></button>
-        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/todos/<%=todo._id%>/edit'"><i class="fas fa-edit"></i></button>
-        <form action="/todos/<%=todo._id%>?_method=DELETE" method="POST">
-          <button class="btn btn-outline-danger"><i class="fas fa-trash-alt btn-icon"></i></button>
-        </form>
-      </div>
-    </div>
-    <%- include('../partials/footer')%>
+  </div>
+  
+  <%- include('../partials/footer-details')%>
