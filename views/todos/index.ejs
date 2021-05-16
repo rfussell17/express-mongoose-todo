@@ -27,20 +27,19 @@
         </div>
     </div>
     </main>
-    <section class="form-inputs">
-      <div class="form-container">
+      <section class="form-input-submit">
         <form action="/todos" method="post" class="todo-form">
-          <div class="form-floating mb-3">
+          <div class="form-floating mb-3 col-12">
             <input type="text" class="form-control" name="name" id="name" placeholder="name@example.com">
             <label for="floatingInput">Todo</label>
           </div>
-          <div class="form-floating mb-3">
+          <!-- <div class="form-floating mb-3 col-12 ">
             <input type="text" class="form-control" name="details" id="details">
             <label for="floatingInput">Add more details...</label>
-          </div>
-          <button type="submit" class="btn btn-outline-success" class="btn-submit"><i
+          </div> -->
+          <button type="submit" class="btn btn-outline-success" class="btn-submit" id="btn-hero-submit"><i
               class="fas fa-check"></i></button>
         </form>
-      </div>
-    </section>
+      </section>
+
     <%- include('../partials/footer')%>

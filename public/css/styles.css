@@ -6,8 +6,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color:rgb(41, 43, 44);
+}
+
 body {
   background-color: #fff;
+  display:flex; 
+flex-direction: column;
+min-height: 100vh;
 }
 
 /*Header */
@@ -24,12 +31,17 @@ body {
   align-items: center;
 }
 
-.form-container {
+.todo-form {
+  display: flex; 
+flex-direction: column;
+align-self: flex-end;
+}
+
+.form-input-submit {
+  margin: 10px auto;
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: flex-end;
-  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 /*footer */
@@ -52,7 +64,10 @@ footer {
 /*buttons & icons */
 
 .fa-pencil-alt {
-padding-left: 80%;
+position: absolute;
+right: 4em;
+bottom: 1.3em;
+color: var(--main-bg-color);
 }
 
 .btn-icon {
@@ -61,3 +76,35 @@ padding-left: 80%;
   height: 10px;
 }
 
+#btn-hero-submit{
+  width: 100%;
+  align-self: center;
+}
+
+.btn-submit {
+  display:block;
+}
+
+.accordion-button {
+  display: flex;
+
+}
+
+   
+  /* @media (min-width: 768px){
+   
+  ...
+   
+  }
+    */
+  /* @media (min-width: 1024px){
+   
+  ...
+   
+  }
+   
+  @media (min-width: 1200px){
+   
+  ...
+   
+  } */
