@@ -1,25 +1,21 @@
 <%- include('../partials/head')%>
     <div class="container">
-      <header>
-        <h3>Edit '<%= todo.name %>'</h3>
-      </header>
-          <form action="/todos/<%=todo._id%>?_method=PUT" method="POST">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" value="<%=todo.name%> " name="name" id="name">
-              <label for="floatingInput">edit todo</label>
-            </div>
-            <div class="form-floating">
-              <input type="text" class="form-control" value="<%=todo.details%>" name="details" id="details">
-              <label for="floatingTextarea">edit details</label>
-            </div>
-            <div class="btn-group edit-btn-group" role="group" aria-label="Basic outlined example">
-              <button type="submit" class="btn btn-outline-success" class="btn-submit"><i
-                 class="fas fa-check"></i></button>
-                 </div>
-          </form>
-      <section class="edit-btns">
-        <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/todos/<%=todo._id%>'"><i
-            class="fas fa-angle-left btn-icon"></i></button>
+      <p class="display-5 text-center mt-3 mb-3"> edit <%= todo.name %></p>
+      <section id="form-input-submit" id="collapse">
+        <form action="/todos/<%=todo._id%>?_method=PUT" method="POST">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" value="<%=todo.name%> " name="name" id="name">
+            <label for="floatingInput">edit todo</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" value="<%=todo.details%>" name="details" id="details">
+            <label for="floatingTextarea">edit details</label>
+          </div>
+          <button type="submit" class="btn btn-success mt-3" class="btn-submit" id="btn-hero-submit"><i
+              class="fas fa-check"></i></button>
+        </form>
       </section>
+
     </div>
-    <%- include('../partials/footer')%>
+    <%- include('../partials/footer-edit')%>
+
