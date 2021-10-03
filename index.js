@@ -3,10 +3,6 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
-// const session = require('express-session');
-// const flash = require('connect-flash');
-// const ejsMate = require('ejs-mate');
-// const ExpressError = require('./helpers/ExpressError');
 
 const Todo = require("./models/todo");
 
@@ -75,3 +71,4 @@ app.delete("/todos/:id", async (req, res) => {
 app.listen(3000, () => {
   console.log("listening on port 3000");
 });
+
